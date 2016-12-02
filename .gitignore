@@ -1,0 +1,7 @@
+/bin/sca/*.txt
+/bin/sca/*.html
+/config/SessionToken.local.php
+/nbproject/private
+/vendor/*
+/.idea/*
+/tests/coverage

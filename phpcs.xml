@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ruleset name="PSRComplianceStandard">
+	<description>Advent of Code 2016</description>
+
+	<!-- Ve Standards -->
+	<rule ref="vendor/ve-interactive/php-sniffer-rules/Ve/ruleset.xml"/>
+
+	<rule ref="PSR2.ControlStructures.SwitchDeclaration">
+		<exclude name="PSR2.ControlStructures.SwitchDeclaration.BreakIndent" />
+	</rule>
+
+</ruleset>
