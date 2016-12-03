@@ -48,6 +48,14 @@ class HqLocatorTest extends TestCase
 				'R8, R4, R4, R8',
 				4,
 			],
+			[
+				'L12, L3, L3, L5',
+				9,
+			],
+			[
+				'L12, L12, L12, L11',
+				null,
+			],
 		];
 	}
 }

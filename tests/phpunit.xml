@@ -14,14 +14,10 @@
 		<testsuite name="unit">
 			<directory>./unit/</directory>
 		</testsuite>
-		<testsuite name="integration">
-			<directory>./integration/</directory>
-		</testsuite>
 	</testsuites>
 	<filter>
 		<whitelist>
 			<directory suffix=".php">../src</directory>
-			<directory suffix=".php">../bin</directory>
 		</whitelist>
 	</filter>
 </phpunit>

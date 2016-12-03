@@ -4,6 +4,8 @@ namespace ElvenSpellmaker\AdventOfCode;
 
 /**
  * Retrieves a challenges input.
+ *
+ * @codeCoverageIgnore
  */
 class ChallengeLoader
 {
