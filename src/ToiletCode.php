@@ -46,7 +46,7 @@ class ToiletCode
 	 *
 	 * @return string
 	 */
-	public function findCode($instructions)
+	public function findCode(string $instructions) : string
 	{
 		$instructions = explode("\n", $instructions);
 		$code = '';
@@ -76,11 +76,11 @@ class ToiletCode
 	/**
 	 * Works out where the new coördinate in a direction
 	 *
-	 * @param array   &$coordinates
-	 * @param integer $alterCoordinate
-	 * @param integer $amountToAdd
+	 * @param array &$coordinates
+	 * @param int   $alterCoordinate
+	 * @param int   $amountToAdd
 	 */
-	private function workOutCode(array &$coordinates, $alterCoordinate, $amountToAdd)
+	private function workOutCode(array &$coordinates, int $alterCoordinate, int $amountToAdd)
 	{
 		$coordinates[$alterCoordinate] += $amountToAdd;
 

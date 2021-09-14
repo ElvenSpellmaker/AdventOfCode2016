@@ -17,7 +17,7 @@ class ChallengeLoader
 	/**
 	 * @param string $cookie
 	 */
-	public function __construct($cookie)
+	public function __construct(string $cookie)
 	{
 		$this->cookie = $cookie;
 	}
@@ -29,7 +29,7 @@ class ChallengeLoader
 	 *
 	 * @return string
 	 */
-	public function load($challenge)
+	public function load(string $challenge) : string
 	{
 		$opts = [
 			'http' => [

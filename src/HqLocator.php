@@ -53,7 +53,7 @@ class HqLocator
 	 *
 	 * @return integer
 	 */
-	public function locate($instructions)
+	public function locate(string $instructions): int
 	{
 		$instructions = explode(', ', $instructions);
 
@@ -89,7 +89,7 @@ class HqLocator
 	 *
 	 * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
 	 */
-	public function locateFirstPlaceVisitedTwice($instructions)
+	public function locateFirstPlaceVisitedTwice(string $instructions)
 	{
 		$instructions = explode(', ', $instructions);
 		$visitedLocations = [];
