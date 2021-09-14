@@ -3,7 +3,7 @@
 if [[ `uname -s` == *"CYGWIN"* ]]
 then
 	export ConEmuANSI=ON
-	if php -i | grep -i "Host => .*-unknown-cygwin"; then
+	if php -i | grep -i "Host => .*-cygwin"; then
 		COMMAND='phpcs'
 	else
 		COMMAND='phpcs.bat'

@@ -14,7 +14,7 @@ class TriangleTester
 	 *
 	 * @return integer
 	 */
-	public function countFeasibleRows($instructions)
+	public function countFeasibleRows(string $instructions) : int
 	{
 		$count = 0;
 
@@ -41,7 +41,7 @@ class TriangleTester
 	 *
 	 * @return integer
 	 */
-	public function countFeasibleColumns($instructions)
+	public function countFeasibleColumns(string $instructions) : int
 	{
 		$count = 0;
 
@@ -79,9 +79,9 @@ class TriangleTester
 	/**
 	 * Works out if three given sides could form a triangle.
 	 *
-	 * @param integer|float $side1
-	 * @param integer|float $side2
-	 * @param integer|float $side3
+	 * @param int|float $side1
+	 * @param int|float $side2
+	 * @param int|float $side3
 	 *
 	 * @return integer|float
 	 */

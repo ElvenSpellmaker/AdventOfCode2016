@@ -15,7 +15,7 @@ class RoomDecryptor
 	 *
 	 * @return array
 	 */
-	public function decryptRooms($roomsList)
+	public function decryptRooms(string $roomsList) : array
 	{
 		$roomsList = explode("\n", $roomsList);
 		$decryptedRoomNames = [];
@@ -44,7 +44,7 @@ class RoomDecryptor
 	 *
 	 * @return integer
 	 */
-	public function getSumOfRealRooms($roomsList)
+	public function getSumOfRealRooms(string $roomsList) : int
 	{
 		$roomsList = explode("\n", $roomsList);
 		$sum = [];
@@ -67,7 +67,7 @@ class RoomDecryptor
 	 *
 	 * @return integer|boolean
 	 */
-	public function isRealRoom($roomCode)
+	public function isRealRoom(string $roomCode)
 	{
 		$roomCodeLength = strlen($roomCode);
 
@@ -88,15 +88,15 @@ class RoomDecryptor
 	 * Extracts the letter count and the Sector ID out of the given room code.
 	 * Also returned is the current position in the string.
 	 *
-	 * @param string  $roomCode
-	 * @param integer $roomCodeLength
+	 * @param string $roomCode
+	 * @param int    $roomCodeLength
 	 *
 	 * @return array
 	 *
 	 * @SuppressWarnings(PHPMD.CyclomaticComplexity)
 	 * PHP MD seems a bit wonky in that calculation ^
 	 */
-	private function extractCountsAndSectorId($roomCode, $roomCodeLength)
+	private function extractCountsAndSectorId(string $roomCode, int $roomCodeLength) : array
 	{
 		$counts = [];
 		$roomNumber = '';
@@ -137,13 +137,13 @@ class RoomDecryptor
 	/**
 	 * Gets the checksum for a room code.
 	 *
-	 * @param string  $roomCode
-	 * @param integer $currentPos
-	 * @param integer $roomCodeLength
+	 * @param string $roomCode
+	 * @param int    $currentPos
+	 * @param int    $roomCodeLength
 	 *
 	 * @return array
 	 */
-	private function getChecksum($roomCode, $currentPos, $roomCodeLength)
+	private function getChecksum(string $roomCode, int $currentPos, int $roomCodeLength) : array
 	{
 		$checksum = [];
 
@@ -167,7 +167,7 @@ class RoomDecryptor
 	 *
 	 * @return array
 	 */
-	private function reorderCounts(array $counts)
+	private function reorderCounts(array $counts) : array
 	{
 		$newCounts = [];
 
@@ -194,12 +194,12 @@ class RoomDecryptor
 	/**
 	 * Rotates a lowercase ASCII string by a given number of places
 	 *
-	 * @param string  $roomString
-	 * @param integer $rotate
+	 * @param string $roomString
+	 * @param int    $rotate
 	 *
 	 * @return string
 	 */
-	private function strRot($roomString, $rotate)
+	private function strRot(string $roomString, int $rotate) : string
 	{
 		$letters = 'abcdefghijklmnopqrstuvwxyz';
 		$rotate = $rotate % 26;
